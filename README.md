@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @aravindanos
 - 👀 I’m interested in Software Developer and Designing
-- 🌱 I’m currently learning Python , HTML and Designing Tools
+- 🌱 Strong Knowledge Of Designing Tools , HTML And Python(basic)
 - 💞️ I’m looking to collaborate on IT Companys
 - 📫 How to reach me osaravindan258@gmail.com
 
