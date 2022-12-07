@@ -1,22 +1,17 @@
 var fs = require('fs')
 
-var start = new Date().getTime();
-
 var input_file = fs.readFileSync('./t8.shakespeare.txt').toString()
 var find_file = fs.readFileSync('./find_words.txt').toString()
 var dict_file = fs.readFileSync('./french_dictionary.csv').toString()
 const dict_List = dict_file.split('\n')
 
-
 const findNameList = find_file.split('\n')
 
+
 for (const findNames of findNameList) {
-   let currentOccurence =  dict_List.find((e)=> e.startsWith(findNames))
+    let currentOccurence = dict_List.find((e) => e.startsWith(findNames))
     currentOccurence = currentOccurence.split(',')
-    input_file=  input_file.replace(new RegExp(currentOccurence[0], 'ig'), currentOccurence[1])
+    input_file = input_file.replace(new RegExp(currentOccurence[0], 'ig'), decodeURIComponent(encodeURIComponent(currentOccurence[1])))
 }
 
 fs.writeFileSync('./output.txt', input_file, 'utf-8')
-var end = new Date().getTime();
-var time = end - start;
-console.log('Execution time: ' + time);
